@@ -29,9 +29,6 @@ urlpatterns = [
     path('todo/<int:todo_id>/', todo_info, name='todo_info'),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/login/', users_views.login, name='login'),
-    path('accounts/signup/', users_views.sign_up, name='signup')
-]
-
-
+    path('accounts/login/', user_views.login, name='login'),
+    path('accounts/signup/', user_views.sign_up, name='signup')
 ]
